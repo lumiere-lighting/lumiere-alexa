@@ -1,0 +1,31 @@
+{
+  "skillManifest": {
+    "publishingInformation": {
+      "locales": {
+        "en-US": {
+          "summary": "Change Lumiere lights around the world.",
+          "examplePhrases": [
+            "Alexa open Lumiere",
+            "Alexa tell Lumiere to change the lights",
+            "Alexa tell Lumiere to change the lights to red and blue"
+          ],
+          "name": "Lumiere",
+          "description":
+            "The Lumiere Alexa skill allows you to change the Lumiere lights around the world."
+        }
+      },
+      "isAvailableWorldwide": true,
+      "testingInstructions": "Sample Testing Instructions.",
+      "category": "SMART_HOME",
+      "distributionCountries": []
+    },
+    "apis": {
+      "custom": {
+        "endpoint": {
+          "sourceDir": "lambda/custom"
+        }
+      }
+    },
+    "manifestVersion": "1.0.1"
+  }
+}

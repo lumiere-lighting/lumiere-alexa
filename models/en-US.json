@@ -1,0 +1,41 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "invocationName": "lumiere",
+      "types": [],
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "name": "SayLightsChanged",
+          "slots": [
+            {
+              "name": "LightsSlot",
+              "type": "AMAZON.LITERAL"
+            }
+          ],
+          "samples": [
+            "change lights",
+            "change the lights",
+            "change lights to {red|LightsSlot}",
+            "change the lights to {red|LightsSlot}",
+            "change lights {red|LightsSlot}",
+            "change lights to {red one two three four five six seven eight nine ten eleven twelve|LightsSlot}",
+            "change the lights to {red one two three four five six seven eight nine ten eleven twelve|LightsSlot}",
+            "change lights {red one two three four five six seven eight nine ten eleven twelve|LightsSlot}"
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "deploy_settings": {
+    "default": {
+      "was_cloned": false,
+      "merge": {
+        "skillManifest": {
+          "apis": {
+            "custom": {
+              "endpoint": {
+                "uri": "ask-custom-Lumiere-default"
+              }
+            }
+          }
+        }
+      },
+      "skill_id": "amzn1.ask.skill.862e89f1-131f-4fb1-92d6-f9e92e6d40ff"
+    }
+  }
+}
