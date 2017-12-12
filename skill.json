@@ -5,19 +5,20 @@
         "en-US": {
           "summary": "Change Lumiere lights around the world.",
           "examplePhrases": [
-            "Alexa open Lumiere",
-            "Alexa tell Lumiere to change the lights",
-            "Alexa tell Lumiere to change the lights to red and blue"
+            "Alexa open Lumiere Bot",
+            "Alexa tell Lumiere Bot to change the lights",
+            "Alexa tell Lumiere Bot to change the lights to red and blue"
           ],
-          "name": "Lumiere",
+          "name": "Lumiere Bot",
           "description":
-            "The Lumiere Alexa skill allows you to change the Lumiere lights around the world."
+            "The Lumiere Bot Alexa skill allows you to change Lumiere lights around the world."
         }
       },
       "isAvailableWorldwide": true,
-      "testingInstructions": "Sample Testing Instructions.",
+      "testingInstructions": "You will need to have Lumiere running.",
       "category": "SMART_HOME",
-      "distributionCountries": []
+      "distributionCountries": [],
+      "keywords": "smart home, smart lights, lumiere, crowdsource"
     },
     "apis": {
       "custom": {

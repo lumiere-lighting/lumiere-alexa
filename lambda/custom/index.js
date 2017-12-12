@@ -67,7 +67,10 @@ var handlers = {
                 ? json.response
                 : 'Lights changed, they should show up soon.'
             )
-            .cardRenderer('Lumiere', `Lights changed to ${lights}`);
+            .cardRenderer(
+              'Lumiere',
+              `Lights changed${lights ? 'to ' + lights : '!'}`
+            );
           this.emit(':responseReady');
         }
         else {
@@ -87,8 +90,9 @@ var handlers = {
   },
 
   'AMAZON.HelpIntent': function() {
-    this.response.speak(`You can try "Alexa, tell Lumiere to change the lights"
-      or "Alexa, tell Lumerie to change the lights to red".`);
+    this.response
+      .speak(`You can try "Alexa, tell Lumiere Bot to change the lights"
+      or "Alexa, tell Lumerie Bot to change the lights to red".`);
     this.emit(':responseReady');
   },
 
@@ -104,6 +108,6 @@ var handlers = {
 
   Unhandled: function() {
     this.response.speak(`Sorry, I did not understand that, please try
-      something like "Alexa, tell Lumiere to change the lights"`);
+      something like "Alexa, tell Lumiere Bot to change the lights"`);
   }
 };
