@@ -69,12 +69,15 @@ var handlers = {
             )
             .cardRenderer(
               'Lumiere',
-              `Lights changed${lights ? 'to ' + lights : '!'}`
+              `Lights changed${lights ? ' to ' + lights : '!'}`
             );
           this.emit(':responseReady');
         }
         else {
-          this.emit('SayLightsNotChanged');
+          this.response.speak(
+            json.response ||
+              'Sorry, something went wrong when trying to update the lights.'
+          );
         }
       })
       .catch(error => {

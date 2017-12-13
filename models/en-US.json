@@ -2,7 +2,100 @@
   "interactionModel": {
     "languageModel": {
       "invocationName": "lumiere bot",
-      "types": [],
+      "types": [
+        {
+          "name": "FILLER_WORDS",
+          "values": [
+            {
+              "id": "the",
+              "name": {
+                "value": "the",
+                "synonyms": []
+              }
+            },
+            {
+              "id": "a",
+              "name": {
+                "value": "a",
+                "synonyms": ["an"]
+              }
+            },
+            {
+              "id": "to",
+              "name": {
+                "value": "to",
+                "synonyms": []
+              }
+            },
+            {
+              "id": "for",
+              "name": {
+                "value": "for",
+                "synonyms": []
+              }
+            }
+          ]
+        },
+        {
+          "name": "VERB_WORDS",
+          "values": [
+            {
+              "id": "change",
+              "name": {
+                "value": "change",
+                "synonyms": []
+              }
+            },
+            {
+              "id": "update",
+              "name": {
+                "value": "update",
+                "synonyms": []
+              }
+            },
+            {
+              "id": "turn",
+              "name": {
+                "value": "turn",
+                "synonyms": []
+              }
+            },
+            {
+              "id": "alter",
+              "name": {
+                "value": "alter",
+                "synonyms": []
+              }
+            }
+          ]
+        },
+        {
+          "name": "NOUN_WORDS",
+          "values": [
+            {
+              "id": "lights",
+              "name": {
+                "value": "lights",
+                "synonyms": ["light", "lighting"]
+              }
+            },
+            {
+              "id": "bulbs",
+              "name": {
+                "value": "bulbs",
+                "synonyms": []
+              }
+            },
+            {
+              "id": "string",
+              "name": {
+                "value": "string",
+                "synonyms": ["string of lights"]
+              }
+            }
+          ]
+        }
+      ],
       "intents": [
         {
           "name": "AMAZON.CancelIntent",
@@ -22,17 +115,24 @@
             {
               "name": "LightsSlot",
               "type": "AMAZON.LITERAL"
+            },
+            {
+              "name": "FillerSlot",
+              "type": "FILLER_WORDS"
+            },
+            {
+              "name": "VerbSlot",
+              "type": "VERB_WORDS"
+            },
+            {
+              "name": "NounSlot",
+              "type": "NOUN_WORDS"
             }
           ],
           "samples": [
-            "change lights",
-            "change the lights",
-            "change lights to {red|LightsSlot}",
-            "change the lights to {red|LightsSlot}",
-            "change lights {red|LightsSlot}",
-            "change lights to {red one two three four five six seven eight nine ten eleven twelve|LightsSlot}",
-            "change the lights to {red one two three four five six seven eight nine ten eleven twelve|LightsSlot}",
-            "change lights {red one two three four five six seven eight nine ten eleven twelve|LightsSlot}"
+            "{FillerSlot} {VerbSlot} {FillerSlot} {NounSlot}",
+            "{FillerSlot} {VerbSlot} {FillerSlot} {NounSlot} {FillerSlot} {red|LightsSlot}",
+            "{FillerSlot} {VerbSlot} {FillerSlot} {NounSlot} {FillerSlot} {red one two three four five six seven eight nine ten eleven twelve|LightsSlot}"
           ]
         }
       ]
