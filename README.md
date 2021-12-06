@@ -1,3 +1,5 @@
+**DEPRECATED.  See `lumiere-client-*` projects.**
+
 # Lumiere Alexa Skill
 
 Alexa skill to change Lumiere lights.
